@@ -7,7 +7,10 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 
 /**
- *
+ * This class lets you create the client side of a point-to-point chat.
+ * There's no actual difference between the client and the server, but
+ * the connection method.
+ * 
  * @author Amedeo
  */
 public class Client {
@@ -72,6 +75,12 @@ public class Client {
         return null;
     }
     
+    /**
+     * It will create a new Client instance, check if it went well, and eventually
+     * start the chat, terminating it afterwards.
+     * 
+     * @param args
+     */
     public static void main(String[] args){
         
         //creo un client

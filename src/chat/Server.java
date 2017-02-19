@@ -8,12 +8,22 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 
 /**
- *
+ * This class lets you create the server side of a point-to-point chat.
+ * There's no actual difference between the client and the server, but
+ * the connection method.
+ * 
  * @author Amedeo
  */
 public class Server {
     
+    /**
+     * This is the server IP. It will be used by the Client
+     */
     public static final String IP = "192.168.56.101";   //IP del server
+
+    /**
+     * This is the server listening port. It will be used by the Client
+     */
     public static final int PORT = 3939;    //porta di ascolto del server
     
     private ServerSocket ssock; //socket che attendera' connessioni
@@ -88,6 +98,12 @@ public class Server {
         return null;
     }
     
+    /**
+     * It will create a new Server instance, check if it went well, and eventually
+     * start the chat, terminating it afterwards.
+     * 
+     * @param args
+     */
     public static void main(String[] args){
         
         Server server = new Server();

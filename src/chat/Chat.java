@@ -14,7 +14,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- *
+ * This class is the actual core of the chat.
+ * It provides every method needed to write, listen and also understand
+ * special commands that trigger an event.
+ * 
  * @author Amedeo
  */
 public class Chat {
@@ -43,6 +46,15 @@ public class Chat {
 
     private boolean over;   //se la chat e' terminata, settato a true
 
+    /**
+     * The constructor needs to have generic InputStream and OutputStream,
+     * respectively to read and write. It also wants to know if the caller needs
+     * to be a server or a client, in order to synchronize them.
+     * 
+     * @param inputStream the input stream
+     * @param outputStream the output stream
+     * @param server true if the caller is a server
+     */
     public Chat(InputStream inputStream, OutputStream outputStream, boolean server) {
 
         this.yourName = "You";  //nome locale di default
